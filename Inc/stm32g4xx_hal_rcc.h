@@ -3245,6 +3245,21 @@ typedef struct
 /* Define used for IS_RCC_CLOCKTYPE() */
 #define RCC_CLOCKTYPE_ALL              (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2)  /*!< All clcoktype to configure */
 
+
+/** @defgroup RCC_Reset_Flag Reset Flag
+  * @{
+  */
+#define RCC_RESET_FLAG_OBL             RCC_CSR_OBLRSTF    /*!< Option Byte Loader reset flag */
+#define RCC_RESET_FLAG_PIN             RCC_CSR_PINRSTF    /*!< PIN reset flag */
+#define RCC_RESET_FLAG_PWR             RCC_CSR_BORRSTF    /*!< BOR or POR/PDR reset flag */
+#define RCC_RESET_FLAG_SW              RCC_CSR_SFTRSTF    /*!< Software Reset flag */
+#define RCC_RESET_FLAG_IWDG            RCC_CSR_IWDGRSTF   /*!< Independent Watchdog reset flag */
+#define RCC_RESET_FLAG_WWDG            RCC_CSR_WWDGRSTF   /*!< Window watchdog reset flag */
+#define RCC_RESET_FLAG_LPWR            RCC_CSR_LPWRRSTF   /*!< Low power reset flag */
+#define RCC_RESET_FLAG_ALL             (RCC_RESET_FLAG_OBL | RCC_RESET_FLAG_PIN | RCC_RESET_FLAG_PWR | \
+                                        RCC_RESET_FLAG_SW | RCC_RESET_FLAG_IWDG | RCC_RESET_FLAG_WWDG | \
+                                        RCC_RESET_FLAG_LPWR)
+
 /**
   * @}
   */
